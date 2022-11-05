@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Drum Kit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="keys">
+        <div data-key="a" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+        </div>
+        <div data-key="s" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+        </div>
+        <div data-key="d" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+        </div>
+        <div data-key="f" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+        </div>
+        <div data-key="g" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+        </div>
+        <div data-key="h" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+        </div>
+        <div data-key="j" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+        </div>
+        <div data-key="k" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+        </div>
+        <div data-key="l" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+        </div>
+    </div>
+
+    <audio data-key="a" src="assets/clap.wav"></audio>
+    <audio data-key="s" src="assets/hihat.wav"></audio>
+    <audio data-key="d" src="assets/kick.wav"></audio>
+    <audio data-key="f" src="assets/openhat.wav"></audio>
+    <audio data-key="g" src="assets/boom.wav"></audio>
+    <audio data-key="h" src="assets/ride.wav"></audio>
+    <audio data-key="j" src="assets/snare.wav"></audio>
+    <audio data-key="k" src="assets/tom.wav"></audio>
+    <audio data-key="l" src="assets/tink.wav"></audio>
+
+    <script>
+        function playSound(e) {
+            const audio = document.querySelector(`audio[data-key="${e.key}"]`); //keycode 가 비권고이므로 key 사용
+            const key = document.querySelector(`.key[data-key="${e.key}"]`);
+            if(!audio){
+                return;
+            }
+            audio.currentTime = 0; // key 연타했을때 audio play
+            audio.play();
+            key.classList.add('playing');
+        }
+
+        function removeTransition(e) {
+            if(e.propertyName !== 'transform'){
+                return;   
+            }
+            this.classList.remove('playing');
+        }
+
+        const keys = document.querySelectorAll('.key')
+
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+
+        window.addEventListener('keydown', playSound);
+    </script>
+</body>
+</html>
