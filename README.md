@@ -16,3 +16,8 @@
  ### 3️⃣ CSS Variables & JavaScript
 * What I've Learned
     * `mousemove` 이벤트로 `change`이벤트 실시간 캐치
+
+## 221107_Day03
+### 4️⃣ Array Cardio Day 1
+* What I've Learned
+    * `filter`, `map`, `reduce`, `sort` 응용 및 연습
