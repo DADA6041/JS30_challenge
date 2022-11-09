@@ -24,3 +24,10 @@
 
 ## 221108_Day04
 ### 5️⃣ Flex_Panel_Gallery
+
+## 221109_Day05
+### 6️⃣ Ajax Type Ahead
+* What I've Learned
+    * `fetch`로 데이터 받아오기
+    * 검색 시 정규 표현식으로 매칭
+    목표 : 검색안되는 사이트 API로 검색기능 구현해보기
