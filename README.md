@@ -31,3 +31,8 @@
     * `fetch`로 데이터 받아오기
     * 검색 시 정규 표현식으로 매칭
     목표 : 검색안되는 사이트 API로 검색기능 구현해보기
+
+## 221110_Day06
+### 7️⃣  Array Cardio Day 2
+* What I've Learned
+    * `some`, `every`, `find`, `findIndex` 응용 및 연습
