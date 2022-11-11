@@ -44,3 +44,18 @@
         * '2d'를 문자열로 전달해줘야 함(대소문자 구분)
     * 초기화버튼 추가
         * `window.location.reload()`
+
+## 221112_Day08
+### 9️⃣ Dev Tools Domination
+* What I've Learned
+    * 중단점 확인 : 개발자도구 `Elements`탭에서 요소 우클릭 후 'Break on...' 선택
+    * 콘솔찍을때 문자열 변경 `%s`, `${변수}`
+    * 콘솔꾸미기 `%c`
+    * `console.warn()`, `console.error()`, `console.info()`
+    * 결과값 false 확인 : `console.assert()`
+    * 콘솔 지우기 : `console.clear()`
+    * 요소 트리 구조로 출력 `console.dir()`
+    * 콘솔 그룹화 : `console.groupCollapsed()`, `console.groupEnd()`
+    * 호출 카운트 : `console.count()`
+    * 작업 경과 시간 : `console.time()`
+    * 표로 나타냄 : `console.table()`

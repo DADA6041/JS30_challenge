@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Console Tricks!</title>
+</head>
+
+<body>
+
+    <p onClick="makeGreen()">xBREAKxDOWNx</p>
+
+    <script>
+        const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+        function makeGreen() {
+            const p = document.querySelector('p');
+            p.style.color = '#BADA55';
+            p.style.fontSize = '50px';
+        }
+
+    // Regular
+    console.log('Hi!')
+
+    // Interpolated
+    console.log('Hi! I am DADA! %s', '♬') // Hi! I am DADA! ♬
+
+    // Styled
+    console.log('%c Hi! I am DADA!', 'font-size:24px');
+
+    // warning!
+    console.warn('NO!!!');
+    
+    // Error :|
+    console.error('ERROR!!!');
+
+    // Info
+    console.info('information');
+
+    // Testing
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains(''),'WRONG!!')
+
+    // clearing
+    console.clear();
+    // Viewing DOM Elements
+    console.dir(p);
+
+    // Grouping together
+    dogs.forEach(dog => {
+        console.groupCollapsed(`${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.groupEnd(`${dog.name}`);
+    })
+
+
+    // counting
+    console.count('dada'); // 1
+    console.count('dada'); // 2
+    console.count('dada'); // 3
+    console.count('dada'); // 4
+
+    // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/user/wesbos')
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('fetching data');
+            console.log(data); // fetching data: 20.182861328125 ms
+        })
+    
+    console.table(dogs);
+    </script>
+</body>
+
+</html>
