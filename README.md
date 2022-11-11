@@ -33,6 +33,14 @@
     목표 : 검색안되는 사이트 API로 검색기능 구현해보기
 
 ## 221110_Day06
-### 7️⃣  Array Cardio Day 2
+### 7️⃣ Array Cardio Day 2
 * What I've Learned
     * `some`, `every`, `find`, `findIndex` 응용 및 연습
+
+## 221111_Day07
+### 8️⃣ Fun with HTML5 Canvas
+* What I've Learned
+    * `getContext()` 메서드 드로잉에 필요한 속성과 함수를 가진 객체를 생성
+        * '2d'를 문자열로 전달해줘야 함(대소문자 구분)
+    * 초기화버튼 추가
+        * `window.location.reload()`
