@@ -59,3 +59,9 @@
     * 호출 카운트 : `console.count()`
     * 작업 경과 시간 : `console.time()`
     * 표로 나타냄 : `console.table()`
+
+## 221113_Day09
+### 1️⃣0️⃣ Hold Shift and Check Checkboxes
+* What I've Learned
+    * `shiftKey`키보드 이벤트 객체 사용
+    * checkbox 활용하기
